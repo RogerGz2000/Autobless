@@ -66,7 +66,6 @@ $(document).ready(function () {
     });
   });
 
-
 //-------Evitar que el boton menu me lleve al top---------------
 
   $(".bt-menu").click(function(event){
