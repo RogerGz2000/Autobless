@@ -1,22 +1,27 @@
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    
+    --azul-oscuro:#00051C; 
+    --azul: #17204E; 
+    --naranja: #F49500;
     color: white;
 }
 body {
-    background-color: #17204E;
+    background-color: var(--azul);
     
 }
 html {
     scroll-behavior: smooth;
+    
 }
+
+
 
 
 /*----------------------------Barra de Navegacion--------------------*/
 
 .lineanaranja {
-    background-color: #F49500;
+    background-color: var(--naranja);
     position: fixed;
     z-index: 81;
     width: 100%;
@@ -32,7 +37,7 @@ html {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    background-color: #00051C;
+    background-color: var(--azul-oscuro);
     user-select: none;
 }
 .logocontenedor {
@@ -75,7 +80,7 @@ html {
     
 }
 .nav_li:hover{
-    background-color: #F49500;
+    background-color: var(--naranja);
     color: black;
     font-weight: bold;
     transition: 0.2s;
@@ -98,6 +103,47 @@ a:visited {
 a:link {
     text-decoration: none;
 }
+
+/* -------------------Nav MOvil---------------------------- */
+
+.header2 {
+    position: fixed;
+    width: 100%;
+    margin-top: 75px;
+    z-index: 120;
+    background-color: blue;
+    display: none;
+
+}
+.menu_bar {
+    display: none;
+}
+.header2 nav {
+    background:var(--azul-oscuro);
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+	margin:20px auto;
+}
+.navmovil-container {
+    list-style: none;
+}
+
+.navmovil-container li {
+    display: inline-block;
+    position: relative;
+}
+
+.navmovil-container li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+.header2 nav ul li:hover {
+    background-color: var(--azul);
+}
+
 /*-------------------Inicio con Slider--------------------*/
 
 #inicio {
@@ -160,7 +206,7 @@ a:link {
     display: flex;
     align-items: center;
     overflow: hidden;
-    outline: 0.2px solid #00051C;
+    outline: 0.2px solid var(--azul-oscuro);
     background-color: black;
     width: 100%;
     justify-content: space-between;
@@ -173,7 +219,7 @@ a:link {
     display: flex;
 }
 .servicio:hover {
-    outline: 0.2px solid #F49500;
+    outline: 0.2px solid var(--naranja);
     
     filter: none;
     transition: 0.3s;
@@ -388,6 +434,62 @@ h4{
     }
 }
 @media(max-width: 800px) {
+    .lineanaranja {
+        display: none;
+    }
+    .nav_container {
+        display: none;
+    }
+
+    /*-------------- nav movil-------------------- */
+
+    .header2 {
+        display: inline;
+        background-color: black;
+        z-index: 96;
+    }
+    .header2 nav{
+        
+            width: 80%;
+            height: calc(100% - 75px);
+            position: fixed;
+            right:100%;
+            margin: 0;
+            overflow: scroll;
+    
+    }
+    .menu_bar {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: black;
+    }
+    .menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar i {
+		float: right;
+		font-size: 40px;
+	}
+    .navmovil-container li {
+        display: block;
+        border-bottom: 1px solid var(--naranja);
+    }
+    .navmovil-container li a{
+        display: block;
+    
+    }
+
+/* -----------------------inicio--------------- */
+
     #inicio {
         height: 400px;
     }

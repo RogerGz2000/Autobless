@@ -26,3 +26,23 @@ function slides(){
     }
 
 }
+
+$(document).ready(main);
+var contador2 = 1;
+
+
+function main () {
+    $('.menu_bar').click(function(){
+        if (contador2 == 1){
+            $('nav').animate({
+                left: '0'
+            });
+            contador2 = 0
+        }   else {
+            contador2 = 1;
+            $('nav').animate({
+                left: '-100%'
+            });
+        }
+    });
+}
