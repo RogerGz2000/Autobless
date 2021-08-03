@@ -1,3 +1,5 @@
+//----------------Slide de imagenes--------------
+
 let slider = document.querySelector(".contenedorslide");
 let sliderIndividual = document.querySelectorAll(".contenido-slider");
 let contador = 1;
@@ -27,6 +29,8 @@ function slides(){
 
 }
 
+//------------------Desplegar Menu-----------------
+
 $(document).ready(main);
 var contador2 = 1;
 
@@ -46,3 +50,26 @@ function main () {
         }
     });
 }
+
+//---------Ocultar menu al seleccionar-----------------
+
+$(document).ready(function () {
+    $(document).on('mouseup', function(e){
+      const container = $(".bt-menu");
+      if(!container.is(e.target) && container.has(e.target).length === 0) {
+        $('#navparamovil').hide('slide');
+      }
+    });
+  
+    $('.bt-menu').on('click', function () {
+      $('#navparamovil').show('slide');
+    });
+  });
+
+
+//-------Evitar que el boton menu me lleve al top---------------
+
+  $(".bt-menu").click(function(event){
+    $("html");
+    event.preventDefault();
+});
