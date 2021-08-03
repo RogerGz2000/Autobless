@@ -111,7 +111,6 @@ a:link {
     width: 100%;
     margin-top: 75px;
     z-index: 120;
-    background-color: blue;
     display: none;
 
 }
@@ -154,27 +153,26 @@ a:link {
     width: 100%;
     overflow: hidden;
     margin: auto;
+    
 }
 .contenedorslide {
-    
-    
     width: 500%;
     z-index: 80;
     overflow: hidden;
     display: flex;
-    box-shadow: 8px 5px 20px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 8px 5px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 8px 5px 20px 0px rgba(0,0,0,0.75);
+    
 }
 .contenido-slider {
     
     width: 100%;
     height: inherit;
+    
 }
 .contenido-slider  img{
     
     width: 100%;
     object-fit: cover;
+    
 }
 
 
@@ -184,7 +182,7 @@ a:link {
     margin: 3vh 3vh;
     position: relative;
     z-index: 5;
-    padding: 132px 20px;
+    padding: 75px 20px;
     margin-top: 0px;
     margin-bottom: -130px;
     user-select: none;
@@ -255,7 +253,6 @@ a:link {
 
 #bloqueubicacionycontacto {
     margin: 3vh 3vh;
-    
     padding: 130px 20px;
     margin-top: 10px;
     
@@ -501,7 +498,6 @@ h4{
     }
     .servicio {
         display: flex;
-        
         justify-content: space-between;
         flex-direction: column;
     }
@@ -520,4 +516,11 @@ h4{
         justify-content: end;
         margin: auto;
     }
+}
+
+@media (max-width:376px) {
+    #inicio {
+        height: 250px;
+    }
+   
 }
